@@ -133,6 +133,82 @@ nav .nav-list a:hover {
     color: #f5ebe0;
 }
 
+section {
+    background-color: var(--secondary-color);
+    min-height: 80vh;
+    display: flex; /* Enables flexbox on the section */
+    justify-content: center; /* Centers horizontally */
+    align-items: flex-start; /* Aligns content to the top */
+    padding-top: 50px; /* Adds space between the nav bar and the hero content */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers content vertically within the container */
+    text-align: center;
+    height: 100%; /* Ensures it takes full height */
+}
+
+.container h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.headshot {
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-bottom: 37px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex; /* Enables flexbox on the headshot */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.headshot img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.headshot img:hover {
+    transform: scale(1.2);
+}
+
+.container p {
+    font-size: 20px;
+    max-width: 70%; /* Sets a maximum width for the paragraph */
+    line-height: 1.5; /* Improves readability */
+    margin-bottom: 20px;
+}
+
+.social-links {
+    font-size: 2rem; /* Adjust the size of the social links */
+    margin-top: 20px; /* Add some space above the social links */
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #d6ccc2;
+    display: inline-flex; /* Ensure the link wraps around the icon */
+    align-items: center; /* Center the icon vertically */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+.social-links a:hover {
+    color: black; /* Change color on hover */
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+.social-links i {
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
 /* Media query for smaller screens (tablets) */
 @media (max-width: 768px) {
     nav {
@@ -155,6 +231,15 @@ nav .nav-list a:hover {
         font-size: 18px;
         padding: 8px 16px; 
     }
+    .headshot {
+        width: 15rem; /* Adjust the width for smaller screens */
+        height: 15rem; /* Adjust the height for smaller screens */
+    }
+
+    .headshot img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* Media query for very small screens (mobile phones) */
@@ -166,5 +251,14 @@ nav .nav-list a:hover {
     nav .nav-list a {
         font-size: 16px;
         padding: 6px 12px;
+    }
+    .headshot {
+        width: 10rem; /* Adjust the width for very small screens */
+        height: 10rem; /* Adjust the height for very small screens */
+    }
+
+    .headshot img {
+        width: 100%;
+        height: 100%;
     }
 }
